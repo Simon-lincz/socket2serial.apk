@@ -1,8 +1,9 @@
-package com.lcz.wificartest;
+package com.fornut.wificartest;
 
 import java.util.Random;
 
-import com.lcz.wificartest.IConnection;
+import com.fornut.wificartest.IConnection;
+import com.fornut.wificartest.R;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -42,7 +43,7 @@ public class MainControl extends Activity {
 		mHandler.sendEmptyMessage(SEND_CMD);
 		
 		cameraView = (MjpegView) findViewById(R.id.mySurfaceView1);
-		cameraView.setSource("http://192.168.1.114:8080/?action=stream");//初始化Camera
+		cameraView.setSource("http://192.168.1.1:8080/?action=stream");
 	}
 	
 	@Override
@@ -104,9 +105,7 @@ public class MainControl extends Activity {
 			mConnection = IConnection.Stub.asInterface(arg1);
 			isBind = true;
 			try {
-				
-//				mConnection.newSocket("192.168.1.1", 2001);
-				mConnection.newSocket("192.168.1.114", 8000);
+				mConnection.newSocket("192.168.1.1", 2001);
 			} catch (RemoteException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

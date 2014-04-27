@@ -1,4 +1,4 @@
-package com.lcz.wificartest;
+package com.fornut.wificartest;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.lcz.wificartest.IConnection;
+import com.fornut.wificartest.IConnection;
 
 import android.app.Service;
 import android.content.Context;
